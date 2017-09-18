@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1= song.title
+  include by_line
+  a(href="../") &larr; Back
+  | |
+  a(href="/library/" + song.id + "/edit") Edit Article
+  | |
+  a(href="/library/" + song.id + "/delete") Delete

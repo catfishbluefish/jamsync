@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+	div.header
+		h1.title= title
+
+	div.main
+		div.grid-x
+			div.medium-2.cell
+				a(href= "/library/albums") Album
+			div.medium-4.cell
+				a(href= "/library") Title
+			div.medium-3.cell
+				a(href="/library/artists") Artists
+			div.medium-3.cell
+				form(action="/library/search", method="get")
+					div
+						label(for="search") Search:
+						input(type="text", name="search" value="")
+					input(type="submit")
+		hr
+
+		each song in songs
+			div.grid-x
+				div.medium-2.cell
+					img.albumArt(src=song.album_art)
+					br
+					p= song.album
+				div.medium-4.cell
+					h3= song.title
+				div.medium-3.cell
+					p= song.artist
+				div.medium-2.cell
+					audio(controls='')
+						source(src=song.file_location, type='audio/mp3')
+
+					a(href = "/library/" + song.id) Edit &rarr;
+
+			hr

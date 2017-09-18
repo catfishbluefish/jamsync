@@ -1,0 +1,73 @@
+/* MAIN STYLES */
+/*--------------------------------------------------------*/
+body {
+  	font: 14px "Josefin Sans", Helvetica, Arial, sans-serif;
+  	color: white;
+  	background-image: url("/images/background-1.jpg");
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	min-height: 100vh;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input[type=text], textarea {
+    width: 250px;
+}
+
+/* FONT AND COLOR SETTINGS */
+/*--------------------------------------------------------*/
+a {
+  color: #00B7FF;
+}
+
+.small {
+    font-size: 10px;
+}
+
+.errors {
+    color: red;
+}
+
+hr {
+	border-color: #694A78;
+}
+
+
+/* OVERRIDING STYLES*/
+/*--------------------------------------------------------*/
+
+.header {
+	position: fixed;
+	top: 0;
+	padding: 1%;
+	width: 100vw;
+	background: rgba(38,13,60, .9);
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.header h1 {
+	text-align: center;
+	font-weight: 300;
+}
+
+.main {
+	margin: 200px 5%;
+	padding: 5%;
+	background: rgba(105,74,120, .6);
+	border-radius: 25px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.cell {
+	padding: 1%;
+}
+
+.albumArt {
+	width: 100px;
+	height: 100px;
+}

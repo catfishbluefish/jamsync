@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1= title
+  p
+    | Are you sure you want to delete
+    em= song.title
+    | ?
+  form(action="/library/" + song.id + "?_method=DELETE", method="post")
+    a(href="/library/" + song.id) No! Take me back!
+
+    input(type="submit", value = "Yes, I am")
